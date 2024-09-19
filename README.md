@@ -1,34 +1,31 @@
-# MDIA-1620
-very very **VERY** cool by **ME**    **Leana Le**       B)
-------------------------
+A cool repository for my MDIA 1620 code.
 
-> Names for dogs
-1. dog
-2. dog2
-3. dog3
-4. ***catdog***
+cd - what you type when you need to change directories
 
-uh I like grilled cheese <]:)
-![grilled cheese from google lol](https://assets.bonappetit.com/photos/57acf62a53e63daf11a4dbee/1:1/w_2560%2Cc_limit/best-ever-grilled-cheese.jpg)
+cd [command]
 
+cd [foldername] - will take you to a folder if you can access it
 
+cd .. - ALWAYS will move you "up" to the directory above
 
-3-2-1 (but opposite order) 
+ls (mac) dir (win) - List the files and folders in your directory
 
-1 Word for how you’re feeling
-- YYOOOWWWWWWW (because I got stung by a wasp and it still hurts)
+mkdir - make a new folder (directory)
 
-2 Things that are still unclear 
-- Class outline 
-- Dont know how to ask questions exactly just yet 
-- What is git vs github
+touch - make a file
 
-3 Aha moment
-- Shoe box sized file of code using hole punches 
-- The uses of github and being able to go back to previous versions in case something goes wrong 
-- The group chat texting analogy also with google doc :)))))
+git clone - clones a version to my repository
 
+git status - tell me the current status of my local repository. prints out the staus of my local repo
 
+git add - adds files to be tracked
 
+git commit - add an entry to our git timeline
 
+git pull - grabs changes from a remote repository
 
+git push - push changes to a remote repository
+
+Wes Bos - free programming tutorials
+
+Understand git - https://blinry.itch.io/oh-my-git
