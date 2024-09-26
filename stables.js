@@ -1,31 +1,22 @@
 
 let horseName = "Hippo";         
-let horseAge = 5;         
-let isHorseInStable = false;         
-let horseIntroduction = " is the name of my horse";         
-console.log(horseName);
-console.log(horseAge);    
-console.log(isHorseInStable);
-console.log(horseName + horseIntroduction);
+let horseNickName = "Cow"
+//let horseAge = 5;         
+//let isHorseInStable = false;         
+let horseIntroduction = " is the name of my horse and their nickname is ";        
 
-console.log(typeof 55555);
-//number
-console.log(typeof "4444");
-//string
-console.log(typeof false);
-//boolean
+//console.log(horseName);
+//console.log(horseAge);    
+//console.log(isHorseInStable);
+console.log(horseName + horseIntroduction + horseNickName);
 
-const STABLE_MONTTHLY_FEE = 100;              //use uppercase for constants 
-console.log(STABLE_MONTTHLY_FEE);
-console.log((STABLE_MONTTHLY_FEE /2 )*12);
+const STABLE_MONTTHLY_FEE = 100;            
+let stableSavings = (STABLE_MONTTHLY_FEE*0.1)*3;
 
-//let rentIntroduction = "it costs " + STABLE_MONTTHLY_FEE + " to board " + horseName;
-let rentIntroduction = `It costs ${STABLE_MONTTHLY_FEE} to board ${horseName}`;
+let rentIntroduction = "It costs $" + (STABLE_MONTTHLY_FEE*0.9)*3 + " to board " + horseName + " for 3 months and saving $" + stableSavings + " with a 10% discount!";
+//let rentIntroduction = `It costs ${STABLE_MONTTHLY_FEE} to board ${horseName} `;
 console.log(rentIntroduction);
 
 //let stableIntroduction = "Welcome to " + horseName + "'s stable";
-let stableIntroduction = `Welcome to "${horseName}"'s stable`
-console.log(stableIntroduction);
-
-
-
+//let stableIntroduction = `Welcome to "${horseName}"'s stable`
+//console.log(stableIntroduction);
