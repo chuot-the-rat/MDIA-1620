@@ -1,27 +1,22 @@
 
-console.log("horse! horse! horse! horse! horse!horse!horse!horse!horse!horse!")
+let horseName = "Hippo";         
+let horseNickName = "Cow"
+//let horseAge = 5;         
+//let isHorseInStable = false;         
+let horseIntroduction = " is the name of my horse and their nickname is ";        
 
-/* 
-name variables using CAMEL CASE 
-A way to separate the words 
-First letter of each word capitalized no spaces
-*/
+//console.log(horseName);
+//console.log(horseAge);    
+//console.log(isHorseInStable);
+console.log(horseName + horseIntroduction + horseNickName);
 
-let horseName = "SomeCoolGuy";          //this is a string, for string prefer double quotes " "
-horseName = "Chicken";
-let horseAge = 5;
+const STABLE_MONTTHLY_FEE = 100;            
+let stableSavings = (STABLE_MONTTHLY_FEE*0.1)*3;
 
-console.log(horseName);
-console.log(horseAge);
+let rentIntroduction = "It costs $" + (STABLE_MONTTHLY_FEE*0.9)*3 + " to board " + horseName + " for 3 months and saving $" + stableSavings + " with a 10% discount!";
+//let rentIntroduction = `It costs ${STABLE_MONTTHLY_FEE} to board ${horseName} `;
+console.log(rentIntroduction);
 
-let isHorseInStable = false;            // always name boolean in a way thats readable to people
-
-console.log(isHorseInStable);
-
-isHorseInStable = false;
-horseName = "Hippo"                     // still chicken ^ because it already console.log out before this line 
-
-console.log(horseName);
-
-
-
+//let stableIntroduction = "Welcome to " + horseName + "'s stable";
+//let stableIntroduction = `Welcome to "${horseName}"'s stable`
+//console.log(stableIntroduction);
