@@ -3,7 +3,7 @@
 let horseName = "Hippo";         
 let horseNickName = "Cow"
 let horseAge = 9;         
-let isHorseInside = true;         
+let isHorseInside = false;         
 let horseIntroduction = " is the name of my horse and their nickname is ";        
 
 //console.log(horseName + horseIntroduction + horseNickName);
@@ -39,38 +39,48 @@ if (horseName === "Hippo" && !isHorseInside) {
 //Horse = ["name", age, isInside, "nickname"];
 let horseOne = [horseName, horseAge, isHorseInside, horseNickName];
 let horseTwo = ["Cream of Mushroom", 2, false, "Soup"];
-let horseThree = ["Roast", 5, ]
+let horseThree = ["Roast", 5, false, "Beef"];
 
-let horseNames = [horseName, horseTwo[0], "Roast"];
-let horseAges = [horseAge, 2, 10];
-let horseNickNames = [horseNickName, "Soup", "Beef"];
-let areHorsesInside = [isHorseInside, false, true];
+let horseNames = [horseName, horseTwo[0], horseThree[0]];
+let horseAges = [horseAge, horseTwo[1], horseThree[1]];
+let horseNickNames = [horseNickName, horseTwo[3], horseThree[3]];
+let areHorsesInside = [isHorseInside, horseTwo[2], horseThree[2]];
 
-console.log(horseOne[0] + "'s nickname is " + horseOne[3]);
 horseOne.push("Blue"); //pushes up something to the end of an array
-console.log(`${horseTwo[0]}'s nickname is ${horseTwo[3]}`);
-console.log(horseOne[1] + horseTwo[1]);
+//console.log(horseOne[1] + horseTwo[1]);
 
+/*
 if (horseOne[1] === 3){
     console.log(horseOne[0] + " is 3");
 } else {
     console.log(horseOne[0] + " is NOT 3");
 }
+*/
 
-let horseIntro = `There are ${horseNames.length} horses staying at my stables: ${horseNames[0]}, ${horseNames[1]}, and ${horseNames[2]}! ${horseNames[0]}'s nickname is ${horseNickNames[0]} and his friends go by ${horseNickName[1]} ${horseNickNames[3]}, and ${horse}`
+let horseIntro = `There are ${horseNames.length} horses staying at my stables: ${horseNames[0]}, ${horseNames[1]}, and ${horseNames[2]}! ${horseNames[0]}'s nickname is ${horseNickNames[0]} and his friends go by ${horseTwo[0]} ${horseTwo[3]}, and ${horseThree[0]} ${horseThree[3]}`
 console.log(horseIntro);
 
-
-
-
-
-
-
-
+if (!areHorsesInside[0] && !areHorsesInside[1] && !areHorsesInside[2]) {
+    console.log("all the horses are frolicking right now!");
+} else if (!areHorsesInside[0] && !areHorsesInside[1] && areHorsesInside[2]) {
+    console.log(horseThree[0] + " was left inside");
+} else if (!areHorsesInside[0] && areHorsesInside[1] && !areHorsesInside[2]) {
+    console.log(horseTwo[0] + " was left inside");
+} else if (areHorsesInside[0] && !areHorsesInside[1] && !areHorsesInside[2]) {
+    console.log(horseOne[0] + " was left inside");
+} else if (areHorsesInside[0] && areHorsesInside[1] && !areHorsesInside[2]) {
+    console.log(horseOne[0] + " and " + horseTwo[0] + " were left inside");
+} else if (!areHorsesInside[0] && areHorsesInside[1] && areHorsesInside[2]) {
+    console.log(horseTwo[0] + " and " + horseThree[0] + " were left inside");
+} else if (areHorsesInside[0] && !areHorsesInside[1] && areHorsesInside[2]) {
+    console.log(horseOne[0] + " and " + horseThree[0] + " were left inside");
+} else {
+    console.log("THEY ARE ALL TRAPPED INSIDE RAAAAAA!!!!");
+}
 
 /* 
 
-LAB TODAY - branch lesson-6 donr by Sunday
+LAB TODAY - branch lesson-6 done by Sunday
 
 Stables.js
 -output an introduction to our horses
