@@ -3,7 +3,6 @@
 very very **VERY** cool by **ME**    **Leana Le**    
 ------------------------
 
-
 > Names for dogs
 1. dog
 2. dog2
@@ -29,21 +28,20 @@ Week 2 - 3-2-1s
 - The group chat texting analogy also with google doc 
 
 
+Week 6 - my 3 and 3 
+
+3 things I understand
+- i think i understand if statements well because it feels like following very specific rules and i kind of like that lol 
+- i like arrays very cool its like a list of information and it just holds it in the order we want and we pull info out very nice
+- looking at unorganized code sucks and hurts my eyes 
+
+3 confusing things
+- not that this is specific to what we learned but i was wondering why we use javascript instead of other languages
+- is there such thing as a var name that is too long? 
+- why do we save things like introductions in a let statement then log it out instead of just console.log-ing it
 
 
 
-Week 3 - my 3-2-1s
 
-3 learned things!
-first thing - how to push to github
-second - cleared up the difference between git and github
-third - 
 
-2 things I am still confused about
 
-first - is camelCase only for JS?
-second - what are git branches
-
-1 word for how im feeling
-
-NEIGHHHH
