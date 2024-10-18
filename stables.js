@@ -5,7 +5,6 @@ let horseNickName = "Cow"
 let horseAge = 9;         
 let isHorseInside = false;         
 let horseIntroduction = " is the name of my horse and their nickname is ";        
-
 //console.log(horseName + horseIntroduction + horseNickName);
 
 //--------  LESSON-4 CODE  --------
@@ -47,19 +46,11 @@ let horseNickNames = [horseNickName, horseTwo[3], horseThree[3]];
 let areHorsesInside = [isHorseInside, horseTwo[2], horseThree[2]];
 
 horseOne.push("Blue"); //pushes up something to the end of an array
-//console.log(horseOne[1] + horseTwo[1]);
-
-/*
-if (horseOne[1] === 3){
-    console.log(horseOne[0] + " is 3");
-} else {
-    console.log(horseOne[0] + " is NOT 3");
-}
-*/
 
 let horseIntro = `There are ${horseNames.length} horses staying at my stables: ${horseNames[0]}, ${horseNames[1]}, and ${horseNames[2]}! ${horseNames[0]}'s nickname is ${horseNickNames[0]} and his friends go by ${horseTwo[0]} ${horseTwo[3]}, and ${horseThree[0]} ${horseThree[3]}`
-console.log(horseIntro);
+//console.log(horseIntro);
 
+/*
 if (!areHorsesInside[0] && !areHorsesInside[1] && !areHorsesInside[2]) {
     console.log("all the horses are frolicking right now!");
 } else if (!areHorsesInside[0] && !areHorsesInside[1] && areHorsesInside[2]) {
@@ -77,24 +68,44 @@ if (!areHorsesInside[0] && !areHorsesInside[1] && !areHorsesInside[2]) {
 } else {
     console.log("THEY ARE ALL TRAPPED INSIDE RAAAAAA!!!!");
 }
-
-/* 
-
-LAB TODAY - branch lesson-6 done by Sunday
-
-Stables.js
--output an introduction to our horses
-- output whether your horses are inside or outside (at least 3!!!)
-
-ReadMe
-3 confusing things 
-3 things you feel like you have a solid understanding of 
-Any analogies that you use to think about things (gif?)
-
 */
 
+//--------  LESSON-7 CODE  --------
 
+function logHorseNicknames(horse, friend, thirdWheel) {
+    const string = `${horseNames[horse]}'s nickname is ${horseNickNames[horse]}, and they have a friend named ${horseNames[friend]}, who is nicknamed ${horseNickNames[friend]}! They are kind of friends with ${horseNames[thirdWheel]}, but not really, and they never call them by their nickname!`;
+    console.log(string);
+}
 
+logHorseNicknames(1,2,0);
+
+/*
+"" <--- strings
+`` <--- template literals
+[] <--- arrays ONLY 
+const arr = [1,2,3]
+arr [0] = 1
+() function paramaters, conditional statements
+{} function bodies, conditional bodies, used with ${} fir template literal insertion 
+*/
+
+function payMe(demand, rent = STABLE_MONTTHLY_FEE) {
+    console.log(`Pay me $${rent}! ${demand}!`)
+}
+
+//payMe("right now, or else!", 200);
+//payMe("Pretty please");
+
+function tidyLocation(horse) {
+    if (areHorsesInside[horse]) {
+        return horseNames[horse] + " is inside.";
+    }
+    return horseNames[horse] + " is outside.";
+}
+
+console.log(tidyLocation(0));
+console.log(tidyLocation(1));
+console.log(tidyLocation(2));
 
 
 
