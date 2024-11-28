@@ -1,48 +1,3 @@
-// Welcome!
-//
-//                                                  #    #
-//                                             %%% ##   ##
-//                                          %%%%% ###%🎀###
-//                                         %%%%% ### %%% #
-//                                       %%%%%% ### %%% ###
-//                                        %%%% ## %% #######
-//                                       %%%%% # %% #@#####
-//                                     %%%%%% # % #########
-//                                    %%%%% ##### #########
-//                          ###        %% ####### #########
-//                 %%% ############    ########### ########
-//              %%%% ############################### #######
-//            %%%%% ################################## ######
-//          %%%%%% #################################### #C###
-//         %%%🌸%% #####################################  ###
-//         %%%%% #######################################
-//        %%%%%% ############### BEANS ##################
-//     % %%%%%%% ############### BEANS ##################
-//      %%%%%%%%% ############## BEANS ##################
-//     %%%%%%%%%% ########################################
-//  %%% %%%%%%%%   ###### ################################
-//    %%%%%%%%      ###### #################### ##########
-// % %%%🌸%%%%        ####### ########### ###### ##########
-//  %%%%%%%%%         #######  ########### ###### ########
-// %%%%%%%%%%          ##### ###  ######### ####### ######
-//  %%%%%%%%%%          #### ##               ####### ####
-//  %🌸%%%%%%%%%           ## #                  ##### ###
-//   %%  %% % %%         # ##                      ## ###
-//     %   %    %        # ###                      # ###
-//                        # ###                     ## ###
-//                        # ###                     ## ###
-//                        # ####                   #### ##
-//                       ### ###                  ##### ###
-//                      ####  ###                 ####   ##
-//                     #####   ###                 ##    ##
-//                    #####    ####                      ###
-//                     ##        ###                     ###
-//                                ####                     ##
-//                                 ####                    ###
-//                                                         ####
-//                                                          ##
-
-
 
 // You can copy and paste this into your stables.js file, and then use it to guide you.
 // Please do not create a new file!
@@ -56,26 +11,40 @@
 
 // Initialize a variable called "horses" that will store the horses in your stable.
 //         :)
-let horse = {
-    name: "Mayo",
-    isInside: true,
+let horses = {
+    name1: "Mayo",
+    isInside1: true,
+    isHungry1: false,
 }
 
 let horse2 = {
-    name: "Mayo",
-    isInside: true,
+    name2: "Beef",
+    isInside: false,
+    isHungry: true,
 }
 
 let horse3 = {
-    name: "Mayo",
+    name: "Mush",
     isInside: true,
+    isHungry: false,
 }
 
-let horses = [horse];
+let myHorses = [horses];
 
 for (let i = 0; i<1; i++) {
-    if (horses[i]["isInside"]) {
-        console.log("They are locked away inside!")
+    if (myHorses[i]["isInside"]) {
+        console.log( horse['name'] +" is locked away inside!")
+    } else {
+        console.log(horse['name'] +" is FREEEEEEE")
+    }
+
+}
+
+for (let i = 0; i<3; i++) {
+    if (horses[i]["isHungry"]) {
+        console.log("They are starving they could even eat a ho...")
+    } else {
+        console.log("not hungry very full yum yum")
     }
 }
 
@@ -105,13 +74,14 @@ let availStalls = 12;
 // - a second, unique method of your choice
 //         :)
 
-function Horse (name,nickname,favTreat, isInside, age, color) {
+function horses (name,nickname,favTreat, isInside, age, color, isHungry) {
     this.name = name;
     this.nickname = nickname;
     this.favTreat = favTreat;
     this.isInside = isInside;
     this.age = age;
     this.color = color;
+    this.isHungry = isHungry;
     this.introduction = function() {
         console.log(`Welcome! This is ${this.name}! Their nickname is ${this.nickName}! They are ${this.age} years old`);
     }
@@ -122,28 +92,36 @@ function Horse (name,nickname,favTreat, isInside, age, color) {
 
 // Store the horses you've just created in your "horses" variable.
 
-let hippo = new Horse("Hippo", "Cow", "bees", false, 1, "pink");
-let beans = new Horse("Soup", "Cream of Mushroom", "Grass", false, 2, "blue");
-let beef = new Horse("Beef", "Roast", "Souls", true, 10, "green"); 
-
+let hippo = new horses("Hippo", "Cow", "bees", false, 1, "pink", true);
+let beans = new horses("Soup", "Cream of Mushroom", "Grass", false, 2, "blue", true);
+let beef = new horses("Beef", "Roast", "Souls", true, 10, "green", true); 
 
 // Fancy! Another horse wants to be stabled! Create a variable that stores an object
 // literal of your new horse, and add it to your "horses" variable.
 
 // Initialize new property to your horses: a boolean that allows you to check if your horse
-// is hungry or not. Use dot notation.
+// is hungry or not. Use dot notation. Also allowed to use bracket notation!! <-- this will be easier
 
-function areHorsesInside(horse) {
-    if (areHorsesInside[horse]) {
-        return horseNames[horse] + " is inside.";
+function hungerCheck(horses) {
+
+    let outputMessage;
+
+    if (hippo.isHungry) {
+        outputMessage = "They are starving they could even eat a ho...";
+    } else {
+        outputMessage = "not hungry very full yum yum";
     }
-    return horseNames[horse] + " is outside.";
+    console.log(outputMessage);
 }
+
+hungerCheck(hippo)
+
 
 //------------------------- Stable roster -------------------------//
 
 // We want to keep track of our horses and how they are doing. Paste the data structure
 // of our horse variable below so we can reference it. It is okay to comment it out.
+//console log out then comment it out?
 
 //---------------------- Growing business ----------------------//
 
