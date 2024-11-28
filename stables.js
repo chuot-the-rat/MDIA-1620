@@ -1,17 +1,23 @@
-const STABLE_MONTTHLY_FEE = 100;    
 
-let horseName = "Hippo";         
-let horseNickName = "Cow"
-let horseAge = 1;         
-let isHorseInside = false;         
+function Horse (name,nickname,favSnack, monthlyRent, isInside, age, color) {
+    this.name = name;
+    this.nickname = nickname;
+    this.favSnack = favSnack;
+    this.MONTHLY_RENT = monthlyRent;
+    this.isInside = isInside;
+    this.age = age;
+    this.color = color;
+    this.introduction = function() {
+        console.log(`Welcome! This is ${this.name}! Their nickname is ${this.nickName}!`);
+    }
+    this.rentNotice = function(daysUntilDue) {
+        console.log(`${this.name}'s rent is due in ${daysUntilDue}, and is $${this.MONTHLY_RENT}! Please pay promptly!`);
+    }
+}
 
-let horseNames = [horseName,"Cream of Mushroom","Roast"];
-let horseNickNames = [horseNickName, "Soup", "Beef"];
-let horseAges = [horseAge, 2, 10];
-let horseLocations = [isHorseInside, false, true];
-
-let stableIntroduction = `Welcome to "${horseName}"'s stable`;
-let horseIntro = `There are ${horseNames.length} horses staying at my stables: ${horseNames[0]}, ${horseNames[1]}, and ${horseNames[2]}! ${horseNames[0]}'s nickname is ${horseNickNames[0]} and his friends go by ${horseTwo[0]} ${horseTwo[3]}, and ${horseThree[0]} ${horseThree[3]}`
+let hippo = new Horse("Hippo", "Cow", "bees", 150, false, 1, "pink");
+let beans = new Horse("Soup", "Cream of Mushroom", "Grass", 120, false, 2, "blue");
+let beef = new Horse("Beef", "Roast", "Souls", 125, true, 10, "green"); 
 
 function getHorseLocation(horse) {
     if (areHorsesInside[horse]) {
