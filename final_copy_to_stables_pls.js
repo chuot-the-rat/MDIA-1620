@@ -1,61 +1,42 @@
 
-// You can copy and paste this into your stables.js file, and then use it to guide you.
-// Please do not create a new file!
-// Feel free to keep the headings (e.g.: "Variables"), but please delete any boilerplate
-// comments. (Your own comments, where necessary, are acceptable.)
-//
-// NOTE: UNLESS SPECIFIED, VARIABLE NAMING IS UP TO YOU. THERE SHOULD BE NO HARD-CODED
-// NUMBERS OR STRINGS WHERE VARIBALES WOULD BE PREFERRED.
+⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣶⣿⣿⣿⣿⣷⣶⣤⣀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⡴⠿⢿⣿⣿⡿⠿⠿⠛⠛⠿⠿⢿⣿⣿⣦⣤⠞⠉⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣠⡶⠟⠋⠁⠀⠀⠀⠀⢀⠀⠠⠤⠤⠉⣻⠏⠀⠀⡄⠙⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣠⣿⣭⠆⠀⠀⠀⠀⢀⠄⠊⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⢸⠀⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣩⡾⠁⠀⠀⠀⡠⠀⠁⠀⠀⣀⡤⠴⠒⠚⠛⠛⠀⠀⠀⡸⠀⢸⠀⠀⠀⢀⣴⡾⢷⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢤⣤⡶⠛⠁⠀⠀⡀⠐⠀⣀⣤⢀⣴⠾⢛⣓⣶⣇⣠⠆⠀⠀⠀⠀⠁⠀⡞⣴⠞⢦⡾⠋⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⠉⠛⠛⠒⠚⠒⣿⠉⢠⡷⡹⢁⣴⠟⠛⢻⣿⡧⠐⠀⠀⠀⠀⠀⣸⣽⠃⠀⠸⠁⠀⠀⣸⣃⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠌⠀⡇⣼⣇⣀⣴⣿⣿⡇⠀⠀⠀⠀⢀⡜⠉⡏⠀⠀⠀⠀⠀⣰⠟⠉⠀⢹⡷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⠀⠀⡅⣿⣿⣿⣿⣿⣿⠃⠀⠀⢀⡴⠋⠀⠀⡇⢀⣠⡀⠀⠔⠁⠀⠀⢀⡾⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢰⡏⠅⠀⠀⠀⠐⢉⠡⣿⣷⠟⣁⣠⡤⠞⠋⠀⠀⠀⣰⡗⠉⢸⡇⠀⠀⠀⠀⣠⠟⠁⣀⣤⣶⣶⣶⣶⣶⣦⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⠳⣄⣤⠇⠀⠀⠀⠈⠈⠀⠀⠈⢙⣲⠖⠀⠀⣠⣾⣿⠃⠀⣜⣤⡄⠀⣠⣾⣥⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠁⠚⠷⢦⣤⣤⣀⣀⣤⣤⣴⠏⢀⣤⣶⣿⣿⡟⡿⠀⠜⠁⢀⡟⠈⠀⠀⣼⣿⠿⠛⣉⠀⠀⠀⡈⠉⠛⠿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⣸⢳⢇⣴⣿⣿⣿⡿⠋⡼⠁⠀⠀⢀⡞⠁⣀⣴⣾⣟⣥⣶⣧⣤⣄⣐⠠⢀⠈⠂⢄⠈⠻⣿⣿⣟⢿⣧⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⢸⡿⢱⣿⣿⠏⠀⣼⠁⠀⠠⠶⣕⠺⣯⠁⠀⠀⠉⠻⣟⠛⠻⣿⣿⣷⡄⠑⠄⠀⠁⡀⠙⣿⣿⡄⠙⠇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠘⠀⣿⣿⠇⠀⣼⠇⠀⠀⣀⣠⣟⡴⠏⠐⢲⢂⠀⠀⠘⣧⠀⢸⣿⣿⣿⡄⠈⡄⠀⠐⡀⢹⣿⣧⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⠶⠖⠒⠒⠒⠿⠦⠤⠹⣿⠀⢰⣿⠀⠀⠀⠉⠉⠀⠀⠀⠌⢮⣿⡄⠀⠀⣿⠀⣼⣿⣿⣿⡇⠀⠀⠀⠀⠁⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢧⣌⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡿⡇⠀⠀⣿⣾⣿⣿⣿⣿⠇⠀⡀⠀⠀⠘⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⠀⠀⣀⡠⠉⠛⠀⠀⠀⠀⠀⢠⠀⠀⠀⠸⢤⣴⣶⣿⣿⣿⣿⣿⣿⠏⠀⠀⠁⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣴⠏⠀⠀⠀⠀⠀⠀⢀⡴⠛⠉⣹⠏⠉⠉⠉⠉⣷⠶⠤⣤⣀⣀⣀⣀⣈⣧⡀⠀⠀⠀⠈⠉⣿⢿⣿⣿⡿⠃⠀⠀⠈⠀⠀⠀⡇⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀
+⠀⠀⠸⣧⣀⠀⠀⠀⠀⠀⣴⠟⠀⠀⢰⡏⠀⠀⠀⠀⣰⠃⠀⠀⠀⠀⠈⣿⠉⠉⠀⠙⣶⣄⠀⠀⠀⠀⣰⣿⠟⠀⠀⠀⠀⠃⠀⠀⠀⠀⠀⣿⣿⣷⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠉⠛⠓⠶⠶⠾⠃⠀⠀⠀⣿⠁⠀⠀⠀⠀⡟⠀⠀⠀⠀⠀⢀⡟⠀⠀⠀⠀⣿⠘⣇⠀⠀⢠⣿⠋⢀⣤⣦⠀⠀⠀⠀⠀⢰⠀⠀⢿⣿⣿⣧⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⣧⠀⠀⠀⠀⠀⣾⠁⠀⠀⠀⠀⡟⢠⡇⠀⠀⢸⢃⣴⠟⠁⣿⠀⠀⠀⠀⠀⢸⠀⠀⠸⣏⠛⠿⢷⣄⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⢹⡄⠀⠀⠀⣸⠃⠀⠀⠀⠀⢸⡇⣾⠀⠀⠀⢸⡟⣽⠀⠀⢻⣇⠀⡀⠀⠀⠈⡄⠀⠀⢻⣆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠈⢷⡀⠀⣰⠏⠀⠀⠀⠀⠀⡿⢰⠇⠀⠀⠀⠈⠁⣿⠀⠀⠀⢻⣦⣁⠀⠀⠀⠹⣦⡀⠀⠹⣷⣄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⠀⠀⣠⡿⠁⣰⠏⠀⠀⠀⠀⠀⣸⢃⡟⠀⠀⠀⠀⠀⢠⡏⠀⠀⠀⠀⠙⠻⣦⣄⡀⠀⠈⠻⣶⣤⣈⡙⠷⣦⣄⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣧⠀⢀⣠⡾⠋⢀⣴⠋⠀⠀⠀⠀⢀⣴⠏⣼⠁⠀⠀⠀⠀⠀⣸⠇⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠓⠶⠶⠿⠿⠿⠟⠉⠉⠉
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⠛⠉⠀⠀⠈⠛⠛⠒⠚⠛⠛⠛⠁⠠⣯⣤⣤⣤⣤⣤⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
 //------------------------- Seting up shop -------------------------//
 
-// Initialize a variable called "horses" that will store the horses in your stable.
-//         :)
-let horses = {
-    name1: "Mayo",
-    isInside1: true,
-    isHungry1: false,
-}
-
-let horse2 = {
-    name2: "Beef",
-    isInside: false,
-    isHungry: true,
-}
-
-let horse3 = {
-    name: "Mush",
-    isInside: true,
-    isHungry: false,
-}
-
-let myHorses = [horses];
-
-for (let i = 0; i<1; i++) {
-    if (myHorses[i]["isInside"]) {
-        console.log( horse['name'] +" is locked away inside!")
-    } else {
-        console.log(horse['name'] +" is FREEEEEEE")
-    }
-
-}
-
-for (let i = 0; i<3; i++) {
-    if (horses[i]["isHungry"]) {
-        console.log("They are starving they could even eat a ho...")
-    } else {
-        console.log("not hungry very full yum yum")
-    }
-}
-
+let horses = [];
 // Create a variable and use it to store a message visitors to the stable.
-
-
+let visitorMessage = "WELCOME TO THE STABLE OF DOOM!!!!!!!!!!"
 // Create a variable and use it to store the cost of a late payment fee.
-const STABLE_MONTTHLY_FEE = 100;    
-const LATE_FEE = 100;            
-let months = 3;
-let stableLateFee = (STABLE_MONTTHLY_FEE * months) + LATE_FEE;
+let stableMonthlyFee = 100;    
+let lateFee = 100;            
+
+//let stableLateFee = (STABLE_MONTTHLY_FEE * months) + LATE_FEE;
 
 // Create a variable and use it to store the number of available stalls in the stable.
 
@@ -63,80 +44,147 @@ let availStalls = 12;
 
 //------------------------- First day -------------------------//
 
-// Using a constructor, add at least 3 horses to your stables.
-//
-// The horse should have the following properties:
-// - name, nickname, favorite treat (string)
-// - age, monthly rent (number)
-// - location (boolean inside/outside)
-// - two unique properties of your choice (use any primitive)
-// - a method that introduces your horse and references at least 3 object properties.
-// - a second, unique method of your choice
-//         :)
-
-function horses (name,nickname,favTreat, isInside, age, color, isHungry) {
+function Horse (name, nickname, favTreat, age, monthlyRent, isInside, color, iq) {
     this.name = name;
     this.nickname = nickname;
     this.favTreat = favTreat;
-    this.isInside = isInside;
     this.age = age;
+    this.monthlyRent = monthlyRent;
+    this.isInside = isInside;
     this.color = color;
-    this.isHungry = isHungry;
+    this.iq = iq;
+    this.isHungry = false;
     this.introduction = function() {
-        console.log(`Welcome! This is ${this.name}! Their nickname is ${this.nickName}! They are ${this.age} years old`);
-    }
-    this.rentNotice = function(daysUntilDue) {
-        console.log(`${this.name}'s rent is due in ${daysUntilDue}, and is $${this.MONTHLY_RENT}! Please pay promptly!`);
-    }
+        return(`Welcome! This is ${this.name}! Their nickname is ${this.nickName}! They are ${this.age} years old`);
+    };
+    this.iqNotice = function() {
+        return(`${this.name}'s not so bright... their iq is only ${this.iq}`);
+    };
 }
 
-// Store the horses you've just created in your "horses" variable.
+let hippo = new Horse("Hippo", "Cow", "bees", 1, 100, true, "pink", 13);
+let beans = new Horse("Soup", "Cream of Mushroom", "Grass", 2, 90000, false, "blue", 50);
+let beef = new Horse("Beef", "Roast", "Souls", 10, 75, true, "green", 1); 
 
-let hippo = new horses("Hippo", "Cow", "bees", false, 1, "pink", true);
-let beans = new horses("Soup", "Cream of Mushroom", "Grass", false, 2, "blue", true);
-let beef = new horses("Beef", "Roast", "Souls", true, 10, "green", true); 
+horses.push(hippo);
+horses.push(beans);
+horses.push(beef);
 
 // Fancy! Another horse wants to be stabled! Create a variable that stores an object
-// literal of your new horse, and add it to your "horses" variable.
 
-// Initialize new property to your horses: a boolean that allows you to check if your horse
-// is hungry or not. Use dot notation. Also allowed to use bracket notation!! <-- this will be easier
-
-function hungerCheck(horses) {
-
-    let outputMessage;
-
-    if (hippo.isHungry) {
-        outputMessage = "They are starving they could even eat a ho...";
-    } else {
-        outputMessage = "not hungry very full yum yum";
+let mushy = {
+    name: "Mushy",
+    nickName: "Peas",
+    favTreat: "Dirt", 
+    age: 5,
+    monthlyRent: 210, 
+    isInside: false,
+    color: "Multicolor",
+    iq: 1000,
+    isHungry: false,
+    introduction() {
+        return(`Welcome! This is ${this.name}! Their nickname is ${this.nickName}! They are ${this.age} years old`);
+    },
+    iqNotice() {
+        return(`${this.name}'s not so bright... their iq is only ${this.iq}`);
     }
-    console.log(outputMessage);
-}
+};
 
-hungerCheck(hippo)
+horses.push(mushy);
 
+horses[0]["isHungry"] = true; 
+horses[1]["isHungry"] = true; 
+horses[2]["isHungry"] = false; 
+horses[3]["isHungry"] = false; 
 
 //------------------------- Stable roster -------------------------//
 
-// We want to keep track of our horses and how they are doing. Paste the data structure
-// of our horse variable below so we can reference it. It is okay to comment it out.
-//console log out then comment it out?
+//[
+//    Horse {
+//      name: 'Hippo',
+//      nickname: 'Cow',
+//      favTreat: 'bees',
+//      age: 1,
+//      monthlyRent: 100,
+//      isInside: true,
+//      color: 'pink',
+//      iq: 13,
+//      isHungry: true,
+//      introduction: [Function (anonymous)],
+//      iqNotice: [Function (anonymous)]
+//    },
+//    Horse {
+//      name: 'Soup',
+//      nickname: 'Cream of Mushroom',
+//      favTreat: 'Grass',
+//      age: 2,
+//      monthlyRent: 90000,
+//      isInside: false,
+//      color: 'blue',
+//      iq: 50,
+//      isHungry: true,
+//      introduction: [Function (anonymous)],
+//      iqNotice: [Function (anonymous)]
+//    },
+//    Horse {
+//      name: 'Beef',
+//      nickname: 'Roast',
+//      favTreat: 'Souls',
+//      age: 10,
+//      monthlyRent: 75,
+//      isInside: true,
+//      color: 'green',
+//      iq: 1,
+//      isHungry: false,
+//      introduction: [Function (anonymous)],
+//      iqNotice: [Function (anonymous)]
+//    },
+//    {
+//      name: 'Mushy',
+//      nickName: 'Peas',
+//      favTreat: 'Dirt',
+//      age: 5,
+//      monthlyRent: 210,
+//      isInside: false,
+//      color: 'Multicolor',
+//      iq: 1000,
+//      isHungry: false,
+//      introduction: [Function: introduction],
+//      iqNotice: [Function: iqNotice]
+//    }
+//  ]
 
 //---------------------- Growing business ----------------------//
 
 // We've added some horses! Re-assign the variable that contains the number of available stalls.
-// Use the math operator to determine how many stables you should have left, given the number of
-// horses you've added.
 
-let remainingStalls = (availStalls );
+availStalls = availStalls - horses.length;
 
-// Express the following in code: If the variable that contains your remaining stalls
-// is less than 2, log out "We need to build more stalls", otherwise log out "We have
-// [number of stalls] available!"
+if (availStalls < 2) {
+    console.log("We need to build more stalls")
+} else {
+    console.log("We have " + availStalls + " stalls available!")
+}
 
 // Create a function that logs out how much will an individual horse will owe if rent is
 // paid late. Invoke the function.
+
+function rentCost() {
+    let outputMessage;
+
+    if (password === input) {
+        outputMessage = "Access Granted!";
+
+        if(password === "forgot" || "reset"){
+            outputMessage += "This password should not be used because it glitches the system...";
+        }
+    } else {
+        outputMessage = "Access Denied!";
+    }
+
+    }
+    console.log(outputMessage);
+}
 
 // Add loop that checks to find out if a certain horse likes a treat. If the horse does not like
 // the treat, log out their disatisfaction and check the next horse. Exit the loop when you find
