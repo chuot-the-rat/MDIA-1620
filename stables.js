@@ -27,7 +27,7 @@
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣧⠀⢀⣠⡾⠋⢀⣴⠋⠀⠀⠀⠀⢀⣴⠏⣼⠁⠀⠀⠀⠀⠀⣸⠇⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠓⠶⠶⠿⠿⠿⠟⠉⠉⠉
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⠛⠉⠀⠀⠈⠛⠛⠒⠚⠛⠛⠛⠁⠠⣯⣤⣤⣤⣤⣤⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-//------------------------- Seting up shop -------------------------//
+
 
 let horses = [];
 let visitorMessage = "WELCOME TO THE STABLE OF DOOM!!!!!!!!!!"
@@ -35,7 +35,7 @@ let stableMonthlyFee = 100;
 let lateFee = 100;            
 let availStalls = 12;
 
-//------------------------- First day -------------------------//
+
 
 // constructor for horses 
 function Horse (name, nickname, favTreat, age, monthlyRent, isInside, color, iq) {    
@@ -49,12 +49,14 @@ function Horse (name, nickname, favTreat, age, monthlyRent, isInside, color, iq)
     this.iq = iq;
     this.isHungry = false;
     this.introduction = function() {
-        return(`Welcome! This is ${this.name}! Their nickname is ${this.nickName}! They are ${this.age} years old`);
+        return(`Welcome! This is ${this.name}! Their nickname is ${this.nickname}! They are ${this.age} years old`);
     };
     this.iqNotice = function() {
         return(`${this.name}'s not so bright... their iq is only ${this.iq}`);
     };
 }
+
+
 
 let hippo = new Horse("Hippo", "Cow", "bees", 1, 100, true, "pink", 13);
 let beans = new Horse("Soup", "Cream of Mushroom", "Grass", 2, 90000, false, "blue", 50);
@@ -63,6 +65,7 @@ let beef = new Horse("Beef", "Roast", "Souls", 10, 75, true, "green", 1);
 horses.push(hippo);
 horses.push(beans);
 horses.push(beef);
+
 
 
 // New horse as object literal
@@ -77,7 +80,7 @@ let mushy = {
     iq: 1000,
     isHungry: false,
     introduction() {
-        return(`Welcome! This is ${this.name}! Their nickname is ${this.nickName}! They are ${this.age} years old`);
+        return(`Welcome! This is ${this.name}! Their nickname is ${this.nickname}! They are ${this.age} years old`);
     },
     iqNotice() {
         return(`${this.name}'s not so bright... their iq is only ${this.iq}`);
@@ -89,9 +92,8 @@ horses.push(mushy);
 horses[0]["isHungry"] = true; 
 horses[1]["isHungry"] = true; 
 horses[2]["isHungry"] = false; 
-horses[3]["isHungry"] = false; 
 
-//------------------------- Stable roster -------------------------//
+
 
 //[
 //    Horse {
@@ -148,7 +150,7 @@ horses[3]["isHungry"] = false;
 //    }
 //  ]
 
-//---------------------- Growing business ----------------------//
+
 
 availStalls = availStalls - horses.length;
 
@@ -167,9 +169,7 @@ function rentCostFees(horse) {
 
 rentCostFees(horses[0]);
 
-// Add loop that checks to find out if a certain horse likes a treat. If the horse does not like
-// the treat, log out their disatisfaction and check the next horse. Exit the loop when you find
-// the horse that likes the treat.
+
 
 function horseTreat(horses, treat) {
 
@@ -185,6 +185,7 @@ function horseTreat(horses, treat) {
 
 horseTreat(horses, "Dirt");
 
+
 function horseChosenNickname (horse) {    
 
     return horse.nickname;
@@ -193,7 +194,8 @@ function horseChosenNickname (horse) {
 
 let chosenHorse = horses[1]; //Soup (thats the name of the selected horse)
 console.log(`${chosenHorse.name} also goes by ${horseChosenNickname(chosenHorse)}`)
-//------------------------- Day to day operations -------------------------//
+
+
 
 function horseSmartOrNot(horse) {
 
@@ -206,34 +208,35 @@ function horseSmartOrNot(horse) {
 
 horseSmartOrNot(horses[2]);
 
-// Morning! Create and invoke a function that moves all your horses outside. It should
-// log out statement indicating the horses have been moved to spend time in the sun.
+
 
 function moveHorsesOutside (horses) {
 
-    horses.isInside = false;
-    console.log(`what are they doing outside??? To spend time in the sun?? the world is ending!`)
-
+    for (let i = 0; i < horses.length; i++) {
+        horses[i].isInside = false; // Move each horse outside
+        console.log(`${horses[i].name}? what are they doing outside??? To spend time in the sun?? the world is ending!`);
+    }
 }
 
 moveHorsesOutside(horses);
 
-// Initialize a method on your horses that moves them inside if they are outside, and
-// vice versa.
 
-for (let i = 0; i < horses.length; i++) {
-    if (!horses[i]["isInside"]){
-        horses.isInside = true;
-    } else {
-        horses.isInside = false;
-    }
+function moveInsideOutside(horse) {
+    horse.isInside = !horse.isInside; 
+    return horse.isInside;
 }
 
 
+function feedHorses(horses) {
+    for (let i = 0; i < horses.length; i++) {
+        if (!horses[i].isInside) {
+            horses[i].isInside = true; 
+            console.log(`${horses[i].name} was outside and now came in`);
+        }
+        console.log(`${horses[i].name} is munching on ${horses[i].favTreat}!`);
+    }
+}
 
-// Food! Create and invoke a function that feeds your horses. If the horse is outside, it
-// should call them in, and then all horses should be fed a treat. Log the activity of
-// the horses.
 
 for (let i = 0; i < horses.length; i++) {
     let message = horses[i]["name"];
@@ -247,9 +250,16 @@ for (let i = 0; i < horses.length; i++) {
 
 }
 
+function bedtime(horses, night) {
+    for (let i = 0; i < horses.length; i++){
+        if (night && !horses[i].isInside) {
+            horses[i].isInside = true; //move horse inside
+            console.log(`${horses[i].name} came inside zzz`);
+        } else if (!night && horses[i].isInside){
+            horses[i].isInside = false; //move horse outside
+            console.log(`${horses[i].name} wants to see the world burn still`);
+        }
+    }
+}
 
-// Bedtime! Update the function that lets your horses outside so that it also calls them
-// in if it is getting dark. Only the horses that moved should log out a message. Invoke the function.
-
-
-
+bedtime(horses, false);
