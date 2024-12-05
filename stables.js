@@ -218,7 +218,7 @@ horseSmartOrNot(horses[2]);
 
 
 
-function moveHorsesOutside (horses,night) {
+function moveHorses (horses,night) {
 
     for (let i = 0; i < horses.length; i++) {
 
@@ -238,7 +238,7 @@ function moveHorsesOutside (horses,night) {
     }
 }
 
-moveHorsesOutside(horses,true);
+moveHorses (horses,true);
 
 function feedHorses(horses) {
     for (let i = 0; i < horses.length; i++) {
