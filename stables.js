@@ -49,7 +49,18 @@ function Horse (name, nickname, favTreat, age, monthlyRent, isInside, color, iq)
     this.iqNotice = function() {
         return(`${this.name}'s not so bright... their iq is only ${this.iq}`);
     };
+    this.switchInsideOutside = function(isInside) {
+        if (this.isInside) {
+            this.isInside = false
+            console.log("GET OUTTA HEREE")
+        } else {
+            this.inside = true
+            console.log("come back pls")
+        }
+    }
+    
 }
+
 
 let hippo = new Horse("Hippo", "Cow", "bees", 1, 100, true, "pink", 13);
 let beans = new Horse("Soup", "Cream of Mushroom", "Grass", 2, 90000, false, "blue", 50);
@@ -75,6 +86,15 @@ let mushy = {
     },
     iqNotice() {
         return(`${this.name}'s not so bright... their iq is only ${this.iq}`);
+    },
+    switchInsideOutside() {
+        if (this.isInside) {
+            this.isInside = false
+            console.log("GET OUTTA HEREE")
+        } else {
+            this.inside = true
+            console.log("come back pls")
+        }
     }
 };
 
@@ -141,6 +161,8 @@ horses[2]["isHungry"] = false;
 
 availStalls = availStalls - horses.length;
 
+
+
 if (availStalls < 2) {
     console.log("We need to build more stalls")
 } else {
@@ -196,22 +218,27 @@ horseSmartOrNot(horses[2]);
 
 
 
-function moveHorsesOutside (horses) {
+function moveHorsesOutside (horses,night) {
 
     for (let i = 0; i < horses.length; i++) {
-        horses[i].isInside = false; // Move each horse outside
-        console.log(`${horses[i].name}? what are they doing outside??? To spend time in the sun?? the world is ending!`);
+
+        if (horses[i].isInside) {
+            horses[i].isInside = false; // Move each horse outside
+            console.log(`${horses[i].name}? time to go outside! To spend time in the sun! the world is ending!`);
+        } else {
+            console.log(`${horses[i].name} has already flung itself into the sun`);
+        }
+    }
+//bedtime
+    for (let i = 0; i < horses.length; i++) {
+        if (night && !horses[i].isInside){
+            horses[i].isInside = true; //move horse inside
+            console.log(`${horses[i].name} came inside zzz now for bedtime!`);
+        }
     }
 }
 
-moveHorsesOutside(horses);
-
-
-function moveInsideOutside(horse) {
-    horse.isInside = !horse.isInside; 
-    return horse.isInside;
-}
-
+moveHorsesOutside(horses,true);
 
 function feedHorses(horses) {
     for (let i = 0; i < horses.length; i++) {
@@ -235,17 +262,3 @@ for (let i = 0; i < horses.length; i++) {
     console.log(message);
 
 }
-
-function bedtime(horses, night) {
-    for (let i = 0; i < horses.length; i++){
-        if (night && !horses[i].isInside) {
-            horses[i].isInside = true; //move horse inside
-            console.log(`${horses[i].name} came inside zzz`);
-        } else if (!night && horses[i].isInside){
-            horses[i].isInside = false; //move horse outside
-            console.log(`${horses[i].name} wants to see the world burn still`);
-        }
-    }
-}
-
-bedtime(horses, false);
