@@ -233,7 +233,6 @@ function moveHorses (horses,night) {
     for (let i = 0; i < horses.length; i++) {
         if (night && !horses[i].isInside){
             horses[i].isInside = true; //move horse inside
-            console.log(`${horses[i].name} came inside zzz now for bedtime!`);
         }
     }
 }
@@ -246,7 +245,7 @@ function feedHorses(horses) {
             horses[i].isInside = true; 
             console.log(`${horses[i].name} was outside and now came in`);
         }
-        console.log(`${horses[i].name} is munching on ${horses[i].favTreat}!`);
+        console.log(`${horses[i].name} is munching on ${horses[i].favTreat}!`); //all horses are fed a treat
     }
 }
 
