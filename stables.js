@@ -1,4 +1,3 @@
-
 //⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣶⣶⣿⣿⣿⣿⣷⣶⣤⣀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⢀⡴⠿⢿⣿⣿⡿⠿⠿⠛⠛⠿⠿⢿⣿⣿⣦⣤⠞⠉⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⢀⣠⡶⠟⠋⠁⠀⠀⠀⠀⢀⠀⠠⠤⠤⠉⣻⠏⠀⠀⡄⠙⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -27,15 +26,11 @@
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣧⠀⢀⣠⡾⠋⢀⣴⠋⠀⠀⠀⠀⢀⣴⠏⣼⠁⠀⠀⠀⠀⠀⣸⠇⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠓⠶⠶⠿⠿⠿⠟⠉⠉⠉
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠿⠛⠉⠀⠀⠈⠛⠛⠒⠚⠛⠛⠛⠁⠠⣯⣤⣤⣤⣤⣤⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-
-
 let horses = [];
 let visitorMessage = "WELCOME TO THE STABLE OF DOOM!!!!!!!!!!"
 let stableMonthlyFee = 100;    
 let lateFee = 100;            
 let availStalls = 12;
-
-
 
 // constructor for horses 
 function Horse (name, nickname, favTreat, age, monthlyRent, isInside, color, iq) {    
@@ -56,8 +51,6 @@ function Horse (name, nickname, favTreat, age, monthlyRent, isInside, color, iq)
     };
 }
 
-
-
 let hippo = new Horse("Hippo", "Cow", "bees", 1, 100, true, "pink", 13);
 let beans = new Horse("Soup", "Cream of Mushroom", "Grass", 2, 90000, false, "blue", 50);
 let beef = new Horse("Beef", "Roast", "Souls", 10, 75, true, "green", 1); 
@@ -65,8 +58,6 @@ let beef = new Horse("Beef", "Roast", "Souls", 10, 75, true, "green", 1);
 horses.push(hippo);
 horses.push(beans);
 horses.push(beef);
-
-
 
 // New horse as object literal
 let mushy = {        
@@ -92,8 +83,6 @@ horses.push(mushy);
 horses[0]["isHungry"] = true; 
 horses[1]["isHungry"] = true; 
 horses[2]["isHungry"] = false; 
-
-
 
 //[
 //    Horse {
@@ -150,8 +139,6 @@ horses[2]["isHungry"] = false;
 //    }
 //  ]
 
-
-
 availStalls = availStalls - horses.length;
 
 if (availStalls < 2) {
@@ -168,7 +155,6 @@ function rentCostFees(horse) {
 }
 
 rentCostFees(horses[0]);
-
 
 
 function horseTreat(horses, treat) {
